@@ -20,9 +20,8 @@ public class 删除有序数组中的重复项 {
         while (right < nums.length) {
             if (nums[left - 1] != nums[right]) {
                 nums[left++] = nums[right];
-            } else {
-                right++;
             }
+            right++;
         }
         return left;
     }
