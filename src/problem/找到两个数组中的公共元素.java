@@ -1,3 +1,5 @@
+package problem;
+
 public class 找到两个数组中的公共元素 {
 
     public int[] findIntersectionValues(int[] nums1, int[] nums2) {
