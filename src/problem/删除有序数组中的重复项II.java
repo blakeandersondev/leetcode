@@ -2,7 +2,6 @@ package problem;
 
 public class 删除有序数组中的重复项II {
 
-    // 1, 1, 2, 2, 2, 3
     public int removeDuplicates(int[] nums) {
         int left = 2;
         int right = 2;
