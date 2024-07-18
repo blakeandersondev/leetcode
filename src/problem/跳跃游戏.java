@@ -2,6 +2,7 @@ package problem;
 
 public class 跳跃游戏 {
 
+    // 动态规划解法
     public boolean canJump(int[] nums) {
         int n = nums.length;
 
@@ -17,5 +18,23 @@ public class 跳跃游戏 {
             }
         }
         return dp[n - 1];
+    }
+
+    // 贪心解法
+    public boolean canJump2(int[] nums) {
+        int n = nums.length;
+        int maxJump = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (i > maxJump) {
+                return false;
+            }
+
+            maxJump = Math.max(maxJump, i + nums[i]);
+            if (maxJump >= n - 1) {
+                return true;
+            }
+        }
+        return false;
     }
 }
